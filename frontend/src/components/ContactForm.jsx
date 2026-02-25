@@ -59,11 +59,11 @@ export const ContactForm = () => {
 
     try {
       await emailjs.sendForm(
-        'service_supabass',
-        'template_contact',
+        EMAIL_CONFIG.serviceId,
+        EMAIL_CONFIG.templateId,
         formRef.current,
         {
-          publicKey: 'YOUR_PUBLIC_KEY',
+          publicKey: EMAIL_CONFIG.publicKey,
         }
       );
 
