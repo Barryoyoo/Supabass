@@ -1,10 +1,11 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'sonner';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { ThemeToggle } from './components/ThemeToggle';
 import { Navigation } from './components/Navigation';
+import { initEmailJS } from './config/emailjs';
 import '@/App.css';
 
 // Lazy load pages
