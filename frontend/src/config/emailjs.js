@@ -1,26 +1,30 @@
 import emailjs from '@emailjs/browser';
 
-// Initialize EmailJS with public key
+// EmailJS Configuration
+// TODO: Update these with your actual EmailJS credentials from https://dashboard.emailjs.com
+// After connecting bodoro2017@gmail.com to EmailJS, you'll get these values
+
 export const initEmailJS = () => {
-  // Note: Replace 'YOUR_PUBLIC_KEY_HERE' with your actual EmailJS public key
-  // Get it from: https://dashboard.emailjs.com/admin/account
+  // Your Public Key from EmailJS Dashboard → Account → General
   const publicKey = 'YOUR_PUBLIC_KEY_HERE';
   
   if (publicKey === 'YOUR_PUBLIC_KEY_HERE') {
-    console.warn('⚠️ EmailJS not configured! Please update /app/frontend/src/config/emailjs.js with your credentials.');
-    console.warn('Get your credentials from: https://www.emailjs.com/');
+    console.warn('⚠️ EmailJS Setup Required!');
+    console.warn('1. Go to https://dashboard.emailjs.com');
+    console.warn('2. Add Gmail service using bodoro2017@gmail.com');
+    console.warn('3. Create a template with variables: user_name, user_email, subject, message');
+    console.warn('4. Update this file with your Service ID, Template ID, and Public Key');
   } else {
     emailjs.init(publicKey);
-    console.log('✅ EmailJS initialized');
+    console.log('✅ EmailJS initialized for Supabass');
   }
 };
 
-// EmailJS configuration
-// TODO: Update these values with your EmailJS credentials
+// EmailJS Configuration
 export const EMAIL_CONFIG = {
-  serviceId: 'YOUR_SERVICE_ID',      // Get from: https://dashboard.emailjs.com/admin
-  templateId: 'YOUR_TEMPLATE_ID',    // Get from: https://dashboard.emailjs.com/admin/templates
-  publicKey: 'YOUR_PUBLIC_KEY_HERE', // Get from: https://dashboard.emailjs.com/admin/account
+  serviceId: 'YOUR_SERVICE_ID',      // From EmailJS → Email Services
+  templateId: 'YOUR_TEMPLATE_ID',    // From EmailJS → Email Templates
+  publicKey: 'YOUR_PUBLIC_KEY_HERE', // From EmailJS → Account
 };
 
 // Check if EmailJS is configured
