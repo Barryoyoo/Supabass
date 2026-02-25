@@ -54,11 +54,19 @@ export const ContactForm = () => {
       return;
     }
 
+    // Check if EmailJS is configured
+    if (!isEmailJSConfigured()) {
+      toast.error('Email service not configured. Please contact the administrator.');
+      console.error('EmailJS is not configured. Update /app/frontend/src/config/emailjs.js');
+      setSubmitStatus('error');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
-      await emailjs.sendForm(
+      const result = await emailjs.sendForm(
         EMAIL_CONFIG.serviceId,
         EMAIL_CONFIG.templateId,
         formRef.current,
@@ -67,7 +75,11 @@ export const ContactForm = () => {
         }
       );
 
+      console.log('✅ Email sent successfully:', result);
+      
       setSubmitStatus('success');
+      toast.success('Message sent successfully!');
+      
       setFormData({
         user_name: '',
         user_email: '',
@@ -77,9 +89,19 @@ export const ContactForm = () => {
 
       setTimeout(() => setSubmitStatus(null), 5000);
     } catch (error) {
-      console.error('Email sending failed:', error);
+      console.error('❌ Email sending failed:', error);
       setSubmitStatus('error');
-      toast.error('Failed to send message. Please try again.');
+      
+      let errorMessage = 'Failed to send message. ';
+      if (error.text) {
+        errorMessage += error.text;
+      } else if (error.message) {
+        errorMessage += error.message;
+      } else {
+        errorMessage += 'Please check your internet connection and try again.';
+      }
+      
+      toast.error(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
