@@ -106,13 +106,20 @@ export const ServicesPage = () => {
                     </div>
                   }
                   back={
-                    <div className="w-full h-full p-8 rounded-xl bg-cyan-500/10 dark:bg-cyan-900/20 backdrop-blur-sm border border-cyan-500/30 shadow-lg flex flex-col justify-center">
-                      <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-                        {service.title}
-                      </h3>
-                      <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                        {service.details}
-                      </p>
+                    <div className="w-full h-full p-8 rounded-xl bg-cyan-500/10 dark:bg-cyan-900/20 backdrop-blur-sm border border-cyan-500/30 shadow-lg flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">
+                          {service.title}
+                        </h3>
+                        <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+                          {service.details}
+                        </p>
+                      </div>
+                      <ContactButton 
+                        type="whatsapp" 
+                        message={`Hi Supabass! I'm interested in ${service.title} services.`}
+                        className="w-full bg-green-500 hover:bg-green-600 text-white"
+                      />
                     </div>
                   }
                 />
