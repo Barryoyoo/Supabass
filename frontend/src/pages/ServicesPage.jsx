@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { HexagonGrid } from '../components/backgrounds/HexagonGrid';
 import { FlipCard } from '../components/AnimatedCard';
+import { ContactButton } from '../components/ContactButton';
 import { Code2, Smartphone, Globe, Database, Cloud, Shield } from 'lucide-react';
 
 const services = [
