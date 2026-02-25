@@ -2,7 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ContactForm } from '../components/ContactForm';
+import { SocialLinks } from '../components/SocialLinks';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { CONTACT_INFO } from '@/config/contacts';
 
 export const ContactPage = () => {
   return (
