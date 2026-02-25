@@ -23,6 +23,11 @@ const LoadingSpinner = () => (
 );
 
 function App() {
+  useEffect(() => {
+    // Initialize EmailJS when app loads
+    initEmailJS();
+  }, []);
+
   return (
     <HelmetProvider>
       <ThemeProvider>
