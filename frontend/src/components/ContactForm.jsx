@@ -109,6 +109,30 @@ export const ContactForm = () => {
 
   return (
     <div className="relative">
+      {!isEmailJSConfigured() && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 backdrop-blur-sm"
+          data-testid="config-warning"
+        >
+          <div className="flex items-start gap-3">
+            <AlertCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div className="text-sm">
+              <p className="font-semibold text-amber-700 dark:text-amber-300 mb-1">
+                EmailJS Not Configured
+              </p>
+              <p className="text-amber-600 dark:text-amber-400">
+                The contact form requires EmailJS configuration. Please update the credentials in{' '}
+                <code className="px-1 py-0.5 rounded bg-amber-500/20">
+                  /app/frontend/src/config/emailjs.js
+                </code>
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
       {submitStatus === 'success' && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 20 }}
