@@ -11,7 +11,7 @@ export const ContactPage = () => {
     <>
       <Helmet>
         <title>Contact - Supabass Tech</title>
-        <meta name="description" content="Get in touch with us. We'd love to hear from you!" />
+        <meta name="description" content="Get in touch with Supabass. We'd love to hear from you!" />
       </Helmet>
 
       {/* Gradient Background */}
