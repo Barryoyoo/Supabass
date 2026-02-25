@@ -30,9 +30,10 @@ export const ContactPage = () => {
             <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-slate-100 mb-6">
               Let's Connect
             </h1>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-8">
               Have a project in mind? Want to collaborate? We'd love to hear from you.
             </p>
+            <SocialLinks className="justify-center" size="large" />
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
