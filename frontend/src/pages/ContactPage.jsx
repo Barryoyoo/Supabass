@@ -49,7 +49,12 @@ export const ContactPage = () => {
                   <Mail className="w-6 h-6 text-cyan-500" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Email</h3>
-                <p className="text-slate-600 dark:text-slate-400">hello@supabass.com</p>
+                <a 
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="text-slate-600 dark:text-slate-400 hover:text-cyan-500 transition-colors"
+                >
+                  {CONTACT_INFO.email}
+                </a>
               </div>
 
               <div className="p-6 rounded-xl bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 shadow-lg" data-testid="contact-info-phone">
@@ -57,7 +62,12 @@ export const ContactPage = () => {
                   <Phone className="w-6 h-6 text-cyan-500" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Phone</h3>
-                <p className="text-slate-600 dark:text-slate-400">+1 (555) 123-4567</p>
+                <a 
+                  href={`tel:${CONTACT_INFO.phone}`}
+                  className="text-slate-600 dark:text-slate-400 hover:text-cyan-500 transition-colors"
+                >
+                  {CONTACT_INFO.phone}
+                </a>
               </div>
 
               <div className="p-6 rounded-xl bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm border border-slate-200 dark:border-slate-700 shadow-lg" data-testid="contact-info-location">
@@ -66,9 +76,9 @@ export const ContactPage = () => {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">Location</h3>
                 <p className="text-slate-600 dark:text-slate-400">
-                  San Francisco, CA
+                  {CONTACT_INFO.location.city}, {CONTACT_INFO.location.state}
                   <br />
-                  United States
+                  {CONTACT_INFO.location.country}
                 </p>
               </div>
             </motion.div>
