@@ -6,6 +6,7 @@ import { Starfield } from '../components/backgrounds/Starfield';
 import { Aurora } from '../components/backgrounds/Aurora';
 import { CyclingHeadline } from '../components/CyclingHeadline';
 import { AnimatedCard } from '../components/AnimatedCard';
+import { SocialLinks } from '../components/SocialLinks';
 import { ArrowRight, Code, Palette, Zap, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
