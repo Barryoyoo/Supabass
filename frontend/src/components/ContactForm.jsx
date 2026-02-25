@@ -1,13 +1,13 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { Send, CheckCircle, XCircle } from 'lucide-react';
+import { Send, CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { EMAIL_CONFIG } from '@/config/emailjs';
+import { EMAIL_CONFIG, isEmailJSConfigured } from '@/config/emailjs';
 
 export const ContactForm = () => {
   const formRef = useRef();
