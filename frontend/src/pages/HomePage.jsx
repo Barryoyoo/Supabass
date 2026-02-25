@@ -24,7 +24,7 @@ export const HomePage = () => {
     <>
       <Helmet>
         <title>Home - Supabass Tech</title>
-        <meta name="description" content="Building tomorrow with cutting-edge technology and innovation" />
+        <meta name="description" content="Supabass - Building tomorrow with cutting-edge technology and innovation" />
       </Helmet>
 
       {theme === 'dark' ? <Starfield /> : <Aurora />}
