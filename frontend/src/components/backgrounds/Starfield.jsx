@@ -37,8 +37,8 @@ export const Starfield = () => {
         const py = star.y * k + canvas.height / 2;
 
         if (px >= 0 && px <= canvas.width && py >= 0 && py <= canvas.height) {
-          const size = (1 - star.z / canvas.width) * star.radius;
-          const opacity = 1 - star.z / canvas.width;
+          const size = Math.max(0.1, (1 - star.z / canvas.width) * star.radius);
+          const opacity = Math.max(0, Math.min(1, 1 - star.z / canvas.width));
           ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
           ctx.beginPath();
           ctx.arc(px, py, size, 0, Math.PI * 2);
