@@ -3,23 +3,22 @@
 
 export const CONTACT_INFO = {
   company: 'Supabass',
-  email: 'bodoro2017@gmail.com',
-  phone: '+1 (555) 123-4567',
+  email: 'supabasske@gmail.com',
+  phone: '+254715808147',
   location: {
-    city: 'San Francisco',
-    state: 'CA',
-    country: 'United States',
+    city: 'Nairobi',
+    country: 'Kenya',
   },
   
   // Social Media Links - UPDATE THESE
   social: {
     whatsapp: {
-      number: '+1234567890',
-      display: '+1 (234) 567-890',
+      number: '+254715808147',
+      display: '+254 715 808147',
     },
     github: {
       username: 'supabass',
-      url: 'https://github.com/supabass',
+      url: 'https://github.com/barryoyoo',
     },
     linkedin: {
       handle: 'supabass',
