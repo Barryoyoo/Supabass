@@ -29,7 +29,7 @@ export const EMAIL_CONFIG = {
 
 // Check if EmailJS is configured
 export const isEmailJSConfigured = () => {
-  return EMAIL_CONFIG.publicKey !== 'YOUR_PUBLIC_KEY_HERE' &&
+  return EMAIL_CONFIG.publicKey !== 'YFrv9LZJvCisTlLBzF' &&
          EMAIL_CONFIG.serviceId !== 'YOUR_SERVICE_ID' &&
          EMAIL_CONFIG.templateId !== 'YOUR_TEMPLATE_ID';
 };
