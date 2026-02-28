@@ -22,9 +22,9 @@ export const initEmailJS = () => {
 
 // EmailJS Configuration
 export const EMAIL_CONFIG = {
-  serviceId: 'YOUR_SERVICE_ID',      // From EmailJS → Email Services
+  serviceId: 'service_w8q4q5i',      // From EmailJS → Email Services
   templateId: 'YOUR_TEMPLATE_ID',    // From EmailJS → Email Templates
-  publicKey: 'YOUR_PUBLIC_KEY_HERE', // From EmailJS → Account
+  publicKey: 'Frv9LZJvCisTlLBzF', // From EmailJS → Account
 };
 
 // Check if EmailJS is configured
